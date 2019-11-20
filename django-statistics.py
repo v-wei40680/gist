@@ -7,6 +7,12 @@
 import datetime
 from dateutil.relativedelta import relativedelta
 
+from django.db.models import Count
+from django.db.models.functions import (
+  ExtractMonth, ExtractYear
+)
+from app.models import Data
+
 # 计算时间
 time_ago = datetime.datetime.now() - relativedelta(years=1)
 # 获取近一年数据
